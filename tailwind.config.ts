@@ -47,7 +47,7 @@ const config: Config = {
       animation: {
         fadeUp: "fadeUp 0.6s ease forwards",
         pulse: "pulse 2s infinite",
-        hintPulse: "hintPulse 3s ease infinite",
+        hintPulse: "hintPulse 4.5s ease-in-out infinite",
       },
     },
   },

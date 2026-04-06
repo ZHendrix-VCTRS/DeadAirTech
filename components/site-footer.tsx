@@ -19,15 +19,15 @@ export function SiteFooter() {
         >
           <SkullLogo size={24} />
         </button>
-        <p className="font-display mt-3 text-[8px] tracking-wide text-[#666]">
+        <p className="font-display mt-3 text-[10px] tracking-wide text-[#666]">
           {SITE_NAME.toUpperCase()} © {year}
         </p>
-        <p className="font-body mt-3 text-[13px] italic text-[#c0c0c0]">DAT&apos;s all, folks.</p>
-        <p className="font-body mt-1.5 text-[11px] italic text-[#808080]">
+        <p className="font-body mt-3 text-[15px] italic text-[#c0c0c0]">DAT&apos;s all, folks.</p>
+        <p className="font-body mt-1.5 text-[13px] italic text-[#808080]">
           Broadcasting nothing, to no one, beautifully.
         </p>
         <div className="mx-auto mt-8 max-w-xl border-t border-[rgba(57,255,20,0.08)] pt-5">
-          <p className="font-body text-[9px] leading-relaxed text-[#555]">
+          <p className="font-body text-[11px] leading-relaxed text-[#555]">
             DISCLAIMER: Dead Air Technologies is a parody and humor site. All commentary, obituaries, and roasts are
             satirical. We are not affiliated with any companies or products mentioned. No actual tech products were harmed
             — they were already dead.

@@ -52,7 +52,7 @@ export function SiteHeader() {
           />
           <Link
             href="/"
-            className="font-display text-[11px] tracking-wide text-dead-neon"
+            className="font-display text-[10px] tracking-wide text-dead-neon"
             style={{ textShadow: "0 0 12px rgba(57,255,20,0.35)" }}
           >
             DEAD AIR
@@ -65,7 +65,7 @@ export function SiteHeader() {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`rounded px-2 py-1.5 font-display text-[7px] tracking-wide transition sm:px-3 sm:text-[8px] ${
+                className={`rounded px-2 py-1.5 font-display text-[10px] tracking-wide transition sm:px-3 ${
                   active
                     ? "bg-[rgba(57,255,20,0.1)] text-dead-neon"
                     : "text-[#909090] hover:text-dead-neon/80"

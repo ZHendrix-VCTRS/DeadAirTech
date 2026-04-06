@@ -28,14 +28,14 @@ export function AuthNav() {
     return (
       <form action="/auth/signout" method="post" className="inline">
         <span
-          className="hidden max-w-[100px] truncate font-body text-[10px] text-dead-muted sm:inline sm:max-w-[140px] sm:text-xs"
+          className="hidden max-w-[100px] truncate font-body text-[11px] text-dead-muted sm:inline sm:max-w-[140px]"
           title={email}
         >
           {email.split("@")[0]}
         </span>
         <button
           type="submit"
-          className="ml-1 rounded px-2 py-1.5 font-display text-[8px] text-[#909090] transition hover:text-dead-red sm:text-[9px]"
+          className="ml-1 rounded px-2 py-1.5 font-display text-[10px] text-[#909090] transition hover:text-dead-red"
         >
           OUT
         </button>
@@ -46,7 +46,7 @@ export function AuthNav() {
   return (
     <Link
       href="/login"
-      className="rounded px-2 py-1.5 font-display text-[8px] text-[#909090] transition hover:text-dead-neon sm:text-[9px]"
+      className="rounded px-2 py-1.5 font-display text-[10px] text-[#909090] transition hover:text-dead-neon"
     >
       LOG IN
     </Link>

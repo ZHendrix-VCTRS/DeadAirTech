@@ -13,8 +13,8 @@ export default async function LeaderboardPage() {
   if (error) {
     return (
       <div className="space-y-4">
-        <h1 className="font-display text-sm text-dead-neon">LEADERBOARD</h1>
-        <p className="font-body text-sm text-dead-red">Could not load leaderboard: {error.message}</p>
+        <h1 className="font-display text-base text-dead-neon">LEADERBOARD</h1>
+        <p className="font-body text-[15px] text-dead-red">Could not load leaderboard: {error.message}</p>
       </div>
     );
   }
@@ -24,9 +24,9 @@ export default async function LeaderboardPage() {
   return (
     <div className="space-y-8">
       <header className="space-y-2 text-center">
-        <p className="font-display text-[8px] tracking-[0.25em] text-[#808080]">RANKED BY HOTNESS</p>
-        <h1 className="font-display text-sm text-dead-neon sm:text-base">LEADERBOARD</h1>
-        <p className="font-body mx-auto max-w-xl text-[13px] text-[#d4d4d4]">
+        <p className="font-display text-[10px] tracking-[0.25em] text-[#808080]">RANKED BY HOTNESS</p>
+        <h1 className="font-display text-base text-dead-neon sm:text-lg">LEADERBOARD</h1>
+        <p className="font-body mx-auto max-w-xl text-[15px] text-[#d4d4d4]">
           Only projects with at least three votes qualify. Democracy is messy; the graveyard is honest.
         </p>
       </header>

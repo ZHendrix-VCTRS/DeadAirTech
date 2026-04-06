@@ -37,12 +37,12 @@ body {
     @apply border border-dead-line bg-[rgba(10,10,10,0.85)];
   }
   .terminal-input {
-    @apply rounded border border-[rgba(57,255,20,0.3)] bg-[rgba(57,255,20,0.05)] px-4 py-3 font-body text-sm text-dead-text outline-none focus:border-dead-neon/50;
+    @apply rounded border border-[rgba(57,255,20,0.3)] bg-[rgba(57,255,20,0.05)] px-4 py-3 font-body text-[14px] text-dead-text outline-none focus:border-dead-neon/50;
   }
   .terminal-btn-primary {
-    @apply cursor-pointer rounded border-none bg-dead-neon px-8 py-3.5 font-display text-[11px] tracking-wide text-dead-bg shadow-neon;
+    @apply cursor-pointer rounded border-none bg-dead-neon px-8 py-3.5 font-display text-[12px] tracking-wide text-dead-bg shadow-neon;
   }
   .terminal-btn-ghost {
-    @apply cursor-pointer rounded border border-dead-neon bg-transparent px-6 py-3 font-display text-[10px] tracking-wide text-dead-neon;
+    @apply cursor-pointer rounded border border-dead-neon bg-transparent px-6 py-3 font-display text-[11px] tracking-wide text-dead-neon;
   }
 }

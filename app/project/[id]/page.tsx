@@ -47,7 +47,7 @@ export default async function ProjectPage({ params }: Props) {
   return (
     <article className="space-y-8">
       <nav>
-        <Link href="/" className="font-display text-[9px] text-[#666] transition hover:text-dead-neon">
+        <Link href="/" className="font-display text-[10px] text-[#666] transition hover:text-dead-neon">
           ← BACK TO GRAVEYARD
         </Link>
       </nav>
@@ -58,12 +58,12 @@ export default async function ProjectPage({ params }: Props) {
             {project.ai_emoji ?? "💀"}
           </span>
           <div className="min-w-0 flex-1">
-            <h1 className="font-display text-base leading-snug text-[#e0e0e0] sm:text-lg">{project.name}</h1>
+            <h1 className="font-display text-[18px] leading-snug text-[#e0e0e0]">{project.name}</h1>
             {project.ai_tagline && (
-              <p className="font-body mt-2 text-sm italic text-[#c0c0c0]">{project.ai_tagline}</p>
+              <p className="font-body mt-2 text-[14px] italic text-[#c0c0c0]">{project.ai_tagline}</p>
             )}
             {project.ai_cause_of_death && (
-              <p className="font-body mt-4 border-l-2 border-dead-red/70 pl-4 text-xs italic text-[#a0a0a0]">
+              <p className="font-body mt-4 border-l-2 border-dead-red/70 pl-4 text-[13px] italic text-[#a0a0a0]">
                 CAUSE OF DEATH: {project.ai_cause_of_death}
               </p>
             )}
@@ -71,20 +71,20 @@ export default async function ProjectPage({ params }: Props) {
         </div>
 
         {project.status === "flagged" && (
-          <p className="rounded border border-dead-red/40 bg-[rgba(255,0,64,0.08)] px-4 py-3 font-body text-sm text-dead-red">
+          <p className="rounded border border-dead-red/40 bg-[rgba(255,0,64,0.08)] px-4 py-3 font-body text-[15px] text-dead-red">
             This obituary was held for review. {project.ai_flag_reason ? `(${project.ai_flag_reason})` : ""}
           </p>
         )}
 
         {showPending && (
-          <p className="animate-pulse font-display text-[10px] text-dead-neon">
+          <p className="animate-pulse font-display text-[11px] text-dead-neon">
             THE OBITUARY WRITER IS STILL SHARPENING THEIR PEN…
           </p>
         )}
 
-        <div className="flex flex-wrap gap-4 text-sm">
+        <div className="flex flex-wrap gap-4 text-[15px]">
           {project.tech_stack && (
-            <span className="rounded border border-dead-line bg-[rgba(10,10,10,0.85)] px-2 py-1 font-body text-xs text-[#c0c0c0]">
+            <span className="rounded border border-dead-line bg-[rgba(10,10,10,0.85)] px-2 py-1 font-body text-[13px] text-[#c0c0c0]">
               {project.tech_stack}
             </span>
           )}
@@ -93,7 +93,7 @@ export default async function ProjectPage({ params }: Props) {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-display text-[9px] text-dead-neon underline-offset-4 hover:underline"
+              className="font-display text-[10px] text-dead-neon underline-offset-4 hover:underline"
             >
               WEBSITE
             </a>
@@ -103,7 +103,7 @@ export default async function ProjectPage({ params }: Props) {
               href={project.github_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-display text-[9px] text-dead-neon underline-offset-4 hover:underline"
+              className="font-display text-[10px] text-dead-neon underline-offset-4 hover:underline"
             >
               GITHUB
             </a>

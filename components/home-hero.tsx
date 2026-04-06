@@ -30,7 +30,7 @@ export function HomeHero() {
       }
       setStatus("ok");
       setEmail("");
-      setMessage("You're in the graveyard. First edition of The Static incoming.");
+      setMessage(null);
     } catch {
       setStatus("err");
       setMessage("Network error. Try again.");
@@ -52,16 +52,28 @@ export function HomeHero() {
           />
         </div>
         <h1
-          className="font-display text-[clamp(14px,3.5vw,22px)] leading-snug text-dead-neon"
-          style={{ textShadow: "0 0 30px rgba(57,255,20,0.4)" }}
+          className="font-display leading-snug text-dead-neon"
+          style={{
+            fontSize: "clamp(24px, 5vw, 48px)",
+            textShadow: "0 0 30px rgba(57,255,20,0.4)",
+          }}
         >
           <GlitchText>{SITE_NAME.toUpperCase()}</GlitchText>
         </h1>
-        <p className="font-body text-sm leading-relaxed text-[#c0c0c0]">{HERO_TAGLINE}</p>
+        <p
+          className="font-body leading-relaxed text-[#c0c0c0]"
+          style={{ fontSize: "clamp(14px, 2vw, 18px)" }}
+        >
+          {HERO_TAGLINE}
+        </p>
         <div className="terminal-border mx-auto max-w-lg rounded-lg border-dead-neon/40 bg-[rgba(57,255,20,0.05)] p-8">
-          <div className="mb-3 text-4xl">💀✉️</div>
-          <p className="font-display text-xs text-dead-neon">YOU&apos;RE IN THE GRAVEYARD.</p>
-          <p className="font-body mt-2 text-[13px] text-[#c0c0c0]">{message}</p>
+          <div className="mb-3 text-4xl" aria-hidden>
+            💀
+          </div>
+          <p className="font-display text-lg text-dead-neon">YOU&apos;RE IN THE GRAVEYARD</p>
+          <p className="font-body mt-3 text-[14px] text-[#c0c0c0]">
+            First edition of The Static incoming.
+          </p>
         </div>
       </section>
     );
@@ -81,13 +93,21 @@ export function HomeHero() {
       </div>
 
       <h1
-        className="font-display text-[clamp(14px,3.5vw,22px)] leading-snug text-dead-neon"
-        style={{ textShadow: "0 0 30px rgba(57,255,20,0.4)" }}
+        className="font-display leading-snug text-dead-neon"
+        style={{
+          fontSize: "clamp(24px, 5vw, 48px)",
+          textShadow: "0 0 30px rgba(57,255,20,0.4)",
+        }}
       >
         <GlitchText>{SITE_NAME.toUpperCase()}</GlitchText>
       </h1>
 
-      <p className="font-body mx-auto max-w-2xl text-sm leading-relaxed text-[#c0c0c0]">{HERO_TAGLINE}</p>
+      <p
+        className="font-body mx-auto max-w-2xl leading-relaxed text-[#c0c0c0]"
+        style={{ fontSize: "clamp(14px, 2vw, 18px)" }}
+      >
+        {HERO_TAGLINE}
+      </p>
 
       <form
         onSubmit={onSubmit}
@@ -101,7 +121,7 @@ export function HomeHero() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="your@email.com"
           autoComplete="email"
-          className="terminal-input min-h-[48px] min-w-[220px] flex-1 rounded px-4 py-3.5 font-body text-sm"
+          className="terminal-input min-h-[48px] min-w-[220px] flex-1 rounded px-4 py-3.5 font-body text-[15px]"
         />
         <button
           type="submit"
@@ -113,10 +133,10 @@ export function HomeHero() {
       </form>
 
       {message && status === "err" && (
-        <p className="font-body text-[11px] text-dead-red">{message}</p>
+        <p className="font-body text-[13px] text-dead-red">{message}</p>
       )}
 
-      <p className="font-body text-[11px] text-[#808080]">
+      <p className="font-body text-[13px] text-[#808080]">
         No spam. Unsubscribe anytime — unlike Google&apos;s products, we respect your choices.
       </p>
     </section>

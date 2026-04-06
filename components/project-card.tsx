@@ -18,14 +18,14 @@ export function ProjectCard({ project, fingerprint, userId }: Props) {
         {emoji}
       </div>
       <div className="p-5 pr-14">
-        <h2 className="font-display text-sm leading-snug text-[#e0e0e0] sm:text-base">
+        <h2 className="font-display text-[18px] leading-snug text-[#e0e0e0]">
           <Link href={`/project/${project.id}`} className="transition hover:text-dead-neon">
             {project.name}
           </Link>
         </h2>
-        <p className="font-body mt-2 text-sm italic text-[#c0c0c0]">{tagline}</p>
+        <p className="font-body mt-2 text-[14px] italic text-[#c0c0c0]">{tagline}</p>
         {project.ai_cause_of_death && (
-          <p className="font-body mt-3 border-l-2 border-dead-red/70 pl-3 text-xs italic text-[#a0a0a0]">
+          <p className="font-body mt-3 border-l-2 border-dead-red/70 pl-3 text-[13px] italic text-[#a0a0a0]">
             CAUSE OF DEATH: {project.ai_cause_of_death}
           </p>
         )}
@@ -39,7 +39,7 @@ export function ProjectCard({ project, fingerprint, userId }: Props) {
           />
           <Link
             href={`/project/${project.id}`}
-            className="font-display text-[9px] text-[#666] underline-offset-4 transition hover:text-dead-neon hover:underline"
+            className="font-display text-[10px] text-[#666] underline-offset-4 transition hover:text-dead-neon hover:underline"
           >
             READ OBIT →
           </Link>

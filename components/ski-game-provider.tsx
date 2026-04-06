@@ -2,6 +2,7 @@
 
 import { createContext, useCallback, useContext, useState } from "react";
 import { SkiFreeOverlay } from "@/components/brand/ski-free-overlay";
+import { SkiGameHint } from "@/components/ski-game-hint";
 
 type Ctx = { openSkiGame: () => void };
 
@@ -22,6 +23,7 @@ export function SkiGameProvider({ children }: { children: React.ReactNode }) {
   return (
     <SkiGameContext.Provider value={{ openSkiGame }}>
       {children}
+      <SkiGameHint />
       {open && <SkiFreeOverlay onClose={() => setOpen(false)} />}
     </SkiGameContext.Provider>
   );

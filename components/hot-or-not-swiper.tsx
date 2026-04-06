@@ -171,13 +171,13 @@ export function HotOrNotSwiper() {
 
   if (initialLoading) {
     return (
-      <p className="font-body text-center text-sm text-[#808080]">Loading the graveyard…</p>
+      <p className="font-body text-center text-[15px] text-[#808080]">Loading the graveyard…</p>
     );
   }
 
   if (loadError && projects.length === 0) {
     return (
-      <p className="font-body text-center text-sm text-dead-red">
+      <p className="font-body text-center text-[15px] text-dead-red">
         Could not load projects: {loadError}
       </p>
     );
@@ -187,8 +187,8 @@ export function HotOrNotSwiper() {
     return (
       <div className="px-4 py-10 text-center">
         <div className="mb-4 text-5xl">⚰️</div>
-        <h3 className="font-display mb-3 text-sm text-dead-neon">ALL VOTES CAST</h3>
-        <p className="font-body mb-6 text-[13px] text-[#d4d4d4]">The dead have been judged. For now.</p>
+        <h3 className="font-display mb-3 text-base text-dead-neon">ALL VOTES CAST</h3>
+        <p className="font-body mb-6 text-[14px] text-[#d4d4d4]">The dead have been judged. For now.</p>
         <button
           type="button"
           onClick={async () => {
@@ -212,14 +212,14 @@ export function HotOrNotSwiper() {
 
   if (idx >= projects.length && fetchingMore) {
     return (
-      <p className="font-body text-center text-sm text-[#808080]">Summoning the next corpse…</p>
+      <p className="font-body text-center text-[15px] text-[#808080]">Summoning the next corpse…</p>
     );
   }
 
   const item = projects[idx];
   if (!item) {
     return (
-      <p className="font-body text-center text-sm text-[#808080]">Loading…</p>
+      <p className="font-body text-center text-[15px] text-[#808080]">Loading…</p>
     );
   }
 
@@ -251,7 +251,7 @@ export function HotOrNotSwiper() {
   return (
     <div className="mx-auto max-w-[420px] select-none">
       <div className="mb-4 text-center">
-        <span className="font-display text-[9px] text-[#a0a0a0]">
+        <span className="font-display text-[10px] text-[#a0a0a0]">
           {idx + 1} / {projects.length}
         </span>
       </div>
@@ -294,29 +294,29 @@ export function HotOrNotSwiper() {
           >
             {emoji}
           </div>
-          <span className="font-display text-[8px] uppercase tracking-[0.2em] text-dead-neon">{meta}</span>
-          <h3 className="font-display mt-2 text-base leading-snug text-[#e0e0e0]">
+          <span className="font-display text-[9px] uppercase tracking-[0.2em] text-dead-neon">{meta}</span>
+          <h3 className="font-display mt-2 text-[18px] leading-snug text-[#e0e0e0]">
             <Link href={`/project/${item.id}`} className="hover:text-dead-neon hover:underline">
               {item.name}
             </Link>
           </h3>
-          <p className="font-body mt-1 text-[13px] italic text-[#c0c0c0]">{tagline}</p>
+          <p className="font-body mt-1 text-[14px] italic text-[#c0c0c0]">{tagline}</p>
         </div>
 
         <div>
-          <div className="font-display mb-1.5 text-[8px] tracking-wide text-dead-red">CAUSE OF DEATH:</div>
-          <p className="font-body text-xs leading-relaxed text-[#d4d4d4]">{cause}</p>
+          <div className="font-display mb-1.5 text-[9px] tracking-wide text-dead-red">CAUSE OF DEATH:</div>
+          <p className="font-body text-[14px] leading-relaxed text-[#d4d4d4]">{cause}</p>
         </div>
 
         {showRes && lastHotPct !== null && (
-          <div className="absolute bottom-3 right-4 font-body text-[10px] text-[#d4d4d4]">
+          <div className="absolute bottom-3 right-4 font-body text-[11px] text-[#d4d4d4]">
             {Math.round(lastHotPct)}% hot
           </div>
         )}
       </div>
 
       {voteError && (
-        <p className="mt-3 text-center font-body text-[11px] text-dead-red">{voteError}</p>
+        <p className="mt-3 text-center font-body text-[13px] text-dead-red">{voteError}</p>
       )}
 
       <div className="mt-6 flex justify-center gap-6">
@@ -341,8 +341,8 @@ export function HotOrNotSwiper() {
       </div>
 
       <div className="mt-2.5 flex justify-center gap-10">
-        <span className="font-display text-[7px] tracking-wide text-dead-red">LET IT ROT</span>
-        <span className="font-display text-[7px] tracking-wide text-dead-neon">RESURRECT</span>
+        <span className="font-display text-[8px] tracking-wide text-dead-red">LET IT ROT</span>
+        <span className="font-display text-[8px] tracking-wide text-dead-neon">RESURRECT</span>
       </div>
     </div>
   );

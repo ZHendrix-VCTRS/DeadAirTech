@@ -69,7 +69,7 @@ export function VoteButtons({
           type="button"
           disabled={pending}
           onClick={() => vote("hot")}
-          className="rounded border border-dead-neon bg-[rgba(57,255,20,0.1)] px-3 py-1.5 font-display text-[9px] text-dead-neon transition hover:bg-[rgba(57,255,20,0.18)] disabled:opacity-50"
+          className="rounded border border-dead-neon bg-[rgba(57,255,20,0.1)] px-3 py-1.5 font-display text-[10px] text-dead-neon transition hover:bg-[rgba(57,255,20,0.18)] disabled:opacity-50"
         >
           🔥 HOT
         </button>
@@ -77,15 +77,15 @@ export function VoteButtons({
           type="button"
           disabled={pending}
           onClick={() => vote("not")}
-          className="rounded border border-dead-red bg-[rgba(255,0,64,0.08)] px-3 py-1.5 font-display text-[9px] text-dead-red transition hover:bg-[rgba(255,0,64,0.14)] disabled:opacity-50"
+          className="rounded border border-dead-red bg-[rgba(255,0,64,0.08)] px-3 py-1.5 font-display text-[10px] text-dead-red transition hover:bg-[rgba(255,0,64,0.14)] disabled:opacity-50"
         >
           🧊 NOT
         </button>
-        <span className="font-body text-xs text-[#808080]">
+        <span className="font-body text-[13px] text-[#808080]">
           {hotPct.toFixed(0)}% hot · {voteCount} votes
         </span>
       </div>
-      {msg && <p className="max-w-xs font-body text-[11px] text-dead-red">{msg}</p>}
+      {msg && <p className="max-w-xs font-body text-[13px] text-dead-red">{msg}</p>}
     </div>
   );
 }

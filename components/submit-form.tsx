@@ -4,9 +4,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
-const labelClass = "block font-display text-[8px] tracking-wider text-[#a0a0a0]";
+const labelClass = "block font-display text-[10px] tracking-wider text-[#a0a0a0]";
 const inputClass =
-  "terminal-input mt-2 w-full rounded px-3 py-2 font-body text-sm text-dead-text placeholder:text-[#555]";
+  "terminal-input mt-2 w-full rounded px-3 py-2 font-body text-[14px] text-dead-text placeholder:text-[#555]";
 
 export function SubmitForm() {
   const router = useRouter();
@@ -173,12 +173,12 @@ export function SubmitForm() {
           name="screenshot"
           type="file"
           accept="image/jpeg,image/png,image/gif,image/webp"
-          className="mt-2 w-full font-body text-sm text-[#808080] file:mr-3 file:rounded file:border file:border-dead-line file:bg-dead-bg file:px-3 file:py-1.5 file:font-display file:text-[8px] file:text-dead-neon"
+          className="mt-2 w-full font-body text-[14px] text-[#808080] file:mr-3 file:rounded file:border file:border-dead-line file:bg-dead-bg file:px-3 file:py-1.5 file:font-display file:text-[10px] file:text-dead-neon"
         />
       </div>
 
       {error && (
-        <p className="rounded border border-dead-red/50 bg-[rgba(255,0,64,0.08)] px-3 py-2 font-body text-sm text-dead-red">
+        <p className="rounded border border-dead-red/50 bg-[rgba(255,0,64,0.08)] px-3 py-2 font-body text-[15px] text-dead-red">
           {error}
         </p>
       )}
