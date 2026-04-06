@@ -14,19 +14,21 @@ export function GlitchText({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <span className="relative inline-block">
+    <span className="relative w-max max-w-full shrink-0 text-center">
       {g && (
         <span
-          className="absolute left-0.5 top-px opacity-80"
+          className="pointer-events-none absolute left-0.5 top-px opacity-80"
           style={{ color: "#ff0040", clipPath: "inset(10% 0 60% 0)" }}
+          aria-hidden
         >
           {children}
         </span>
       )}
       {g && (
         <span
-          className="absolute -left-0.5 -top-px opacity-80"
+          className="pointer-events-none absolute -left-0.5 -top-px opacity-80"
           style={{ color: "#00d4ff", clipPath: "inset(50% 0 10% 0)" }}
+          aria-hidden
         >
           {children}
         </span>

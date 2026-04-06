@@ -41,18 +41,17 @@ export function HomeHero() {
     return (
       <section
         id="the-static"
-        className="mx-auto max-w-2xl scroll-mt-24 space-y-6 px-2 text-center animate-fadeUp"
+        className="mx-auto flex w-full max-w-2xl flex-col items-center scroll-mt-24 space-y-6 px-0 text-center animate-fadeUp"
       >
-        <div className="flex justify-center">
+        <div className="flex w-full justify-center">
           <SkullLogo
             size={64}
             onClick={openSkiGame}
-            className="mx-auto"
             style={{ filter: "drop-shadow(0 0 12px rgba(57,255,20,0.35))" }}
           />
         </div>
         <h1
-          className="font-display whitespace-normal leading-snug text-dead-neon md:whitespace-nowrap"
+          className="flex w-full justify-center text-center font-display whitespace-normal leading-snug text-dead-neon md:whitespace-nowrap"
           style={{
             fontSize: "clamp(18px, 4vw, 42px)",
             textShadow: "0 0 30px rgba(57,255,20,0.4)",
@@ -61,12 +60,12 @@ export function HomeHero() {
           <GlitchText>{SITE_NAME.toUpperCase()}</GlitchText>
         </h1>
         <p
-          className="font-body leading-relaxed text-[#c0c0c0]"
+          className="w-full max-w-2xl font-body leading-relaxed text-[#c0c0c0]"
           style={{ fontSize: "clamp(14px, 2vw, 18px)" }}
         >
           {HERO_TAGLINE}
         </p>
-        <div className="terminal-border mx-auto max-w-lg rounded-lg border-dead-neon/40 bg-[rgba(57,255,20,0.05)] p-8">
+        <div className="terminal-border w-full max-w-lg rounded-lg border-dead-neon/40 bg-[rgba(57,255,20,0.05)] p-8">
           <div className="mb-3 text-4xl" aria-hidden>
             💀
           </div>
@@ -82,9 +81,9 @@ export function HomeHero() {
   return (
     <section
       id="the-static"
-      className="mx-auto max-w-2xl scroll-mt-24 space-y-6 px-2 text-center animate-fadeUp"
+      className="mx-auto flex w-full max-w-2xl flex-col items-center scroll-mt-24 space-y-6 px-0 text-center animate-fadeUp"
     >
-      <div className="flex justify-center">
+      <div className="flex w-full justify-center">
         <SkullLogo
           size={64}
           onClick={openSkiGame}
@@ -93,7 +92,7 @@ export function HomeHero() {
       </div>
 
       <h1
-        className="font-display whitespace-normal leading-snug text-dead-neon md:whitespace-nowrap"
+        className="flex w-full justify-center text-center font-display whitespace-normal leading-snug text-dead-neon md:whitespace-nowrap"
         style={{
           fontSize: "clamp(18px, 4vw, 42px)",
           textShadow: "0 0 30px rgba(57,255,20,0.4)",
@@ -103,7 +102,7 @@ export function HomeHero() {
       </h1>
 
       <p
-        className="font-body mx-auto max-w-2xl leading-relaxed text-[#c0c0c0]"
+        className="w-full max-w-2xl font-body leading-relaxed text-[#c0c0c0]"
         style={{ fontSize: "clamp(14px, 2vw, 18px)" }}
       >
         {HERO_TAGLINE}
@@ -111,7 +110,7 @@ export function HomeHero() {
 
       <form
         onSubmit={onSubmit}
-        className="mx-auto flex max-w-[460px] flex-col items-stretch gap-2 sm:flex-row sm:flex-wrap sm:justify-center"
+        className="flex w-full max-w-[460px] flex-col items-stretch gap-2 sm:flex-row sm:flex-wrap sm:justify-center"
       >
         <input
           type="email"
@@ -133,10 +132,10 @@ export function HomeHero() {
       </form>
 
       {message && status === "err" && (
-        <p className="font-body text-[13px] text-dead-red">{message}</p>
+        <p className="w-full max-w-[460px] font-body text-[13px] text-dead-red">{message}</p>
       )}
 
-      <p className="font-body text-[13px] text-[#808080]">
+      <p className="w-full max-w-2xl font-body text-[13px] text-[#808080]">
         No spam. Unsubscribe anytime — unlike Google&apos;s products, we respect your choices.
       </p>
     </section>
