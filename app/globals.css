@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --dead-bg: #0a0a0a;
+  --dead-neon: #39ff14;
+}
+
+html {
+  @apply bg-dead-bg;
+}
+
+body {
+  @apply min-h-screen bg-dead-bg font-body text-dead-text antialiased;
+}
+
+::selection {
+  background: #39ff14;
+  color: #0a0a0a;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #39ff14;
+  border-radius: 3px;
+}
+
+@layer utilities {
+  .terminal-border {
+    @apply border border-dead-line bg-[rgba(10,10,10,0.85)];
+  }
+  .terminal-input {
+    @apply rounded border border-[rgba(57,255,20,0.3)] bg-[rgba(57,255,20,0.05)] px-4 py-3 font-body text-sm text-dead-text outline-none focus:border-dead-neon/50;
+  }
+  .terminal-btn-primary {
+    @apply cursor-pointer rounded border-none bg-dead-neon px-8 py-3.5 font-display text-[11px] tracking-wide text-dead-bg shadow-neon;
+  }
+  .terminal-btn-ghost {
+    @apply cursor-pointer rounded border border-dead-neon bg-transparent px-6 py-3 font-display text-[10px] tracking-wide text-dead-neon;
+  }
+}
