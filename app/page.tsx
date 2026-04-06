@@ -3,16 +3,17 @@ import { HotOrNotSwiper } from "@/components/hot-or-not-swiper";
 
 export default function HomePage() {
   return (
-    <div className="space-y-12 sm:space-y-16">
+    <div>
       <HomeHero />
 
-      <div className="border-t border-dead-line" aria-hidden />
-
-      <section id="hot-or-not" className="scroll-mt-24">
+      <section
+        id="hot-or-not"
+        className="scroll-mt-24 border-t border-[rgba(57,255,20,0.15)] bg-[rgba(57,255,20,0.02)] pt-20"
+      >
         <p className="mb-1 text-center font-display text-[10px] tracking-[0.25em] text-dead-red animate-pulse">
           ● LIVE
         </p>
-        <h2 className="font-display mb-2 text-center text-sm tracking-widest text-dead-neon">
+        <h2 className="font-display mb-2 text-center text-[18px] tracking-widest text-dead-neon">
           HOT OR NOT: DEAD TECH EDITION
         </h2>
         <p className="font-body mb-8 text-center text-[15px] text-[#d4d4d4]">

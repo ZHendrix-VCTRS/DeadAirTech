@@ -52,9 +52,9 @@ export function HomeHero() {
           />
         </div>
         <h1
-          className="font-display leading-snug text-dead-neon"
+          className="font-display whitespace-normal leading-snug text-dead-neon md:whitespace-nowrap"
           style={{
-            fontSize: "clamp(24px, 5vw, 48px)",
+            fontSize: "clamp(18px, 4vw, 42px)",
             textShadow: "0 0 30px rgba(57,255,20,0.4)",
           }}
         >
@@ -93,9 +93,9 @@ export function HomeHero() {
       </div>
 
       <h1
-        className="font-display leading-snug text-dead-neon"
+        className="font-display whitespace-normal leading-snug text-dead-neon md:whitespace-nowrap"
         style={{
-          fontSize: "clamp(24px, 5vw, 48px)",
+          fontSize: "clamp(18px, 4vw, 42px)",
           textShadow: "0 0 30px rgba(57,255,20,0.4)",
         }}
       >

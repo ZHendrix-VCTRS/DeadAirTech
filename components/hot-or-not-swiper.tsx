@@ -295,7 +295,7 @@ export function HotOrNotSwiper() {
             {emoji}
           </div>
           <span className="font-display text-[9px] uppercase tracking-[0.2em] text-dead-neon">{meta}</span>
-          <h3 className="font-display mt-2 text-[18px] leading-snug text-[#e0e0e0]">
+          <h3 className="font-display mt-2 text-[20px] leading-snug text-[#e0e0e0]">
             <Link href={`/project/${item.id}`} className="hover:text-dead-neon hover:underline">
               {item.name}
             </Link>
@@ -325,7 +325,7 @@ export function HotOrNotSwiper() {
           aria-label="Not"
           onClick={() => vote("left")}
           disabled={voting}
-          className="flex h-[72px] w-[72px] cursor-pointer items-center justify-center rounded-full border-2 border-dead-red bg-[rgba(255,0,64,0.1)] text-2xl disabled:opacity-50"
+          className="flex h-20 w-20 cursor-pointer items-center justify-center rounded-full border-2 border-dead-red bg-[rgba(255,0,64,0.1)] text-2xl disabled:opacity-50"
         >
           💀
         </button>
@@ -334,15 +334,15 @@ export function HotOrNotSwiper() {
           aria-label="Hot"
           onClick={() => vote("right")}
           disabled={voting}
-          className="flex h-[72px] w-[72px] cursor-pointer items-center justify-center rounded-full border-2 border-dead-neon bg-[rgba(57,255,20,0.1)] text-2xl disabled:opacity-50"
+          className="flex h-20 w-20 cursor-pointer items-center justify-center rounded-full border-2 border-dead-neon bg-[rgba(57,255,20,0.1)] text-2xl disabled:opacity-50"
         >
           🔋
         </button>
       </div>
 
       <div className="mt-2.5 flex justify-center gap-10">
-        <span className="font-display text-[8px] tracking-wide text-dead-red">LET IT ROT</span>
-        <span className="font-display text-[8px] tracking-wide text-dead-neon">RESURRECT</span>
+        <span className="font-display text-[9px] tracking-wide text-dead-red">LET IT ROT</span>
+        <span className="font-display text-[9px] tracking-wide text-dead-neon">RESURRECT</span>
       </div>
     </div>
   );
