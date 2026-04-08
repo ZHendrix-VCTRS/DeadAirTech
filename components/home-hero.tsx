@@ -4,7 +4,7 @@ import { useState } from "react";
 import { GlitchText } from "@/components/brand/glitch-text";
 import { SkullLogo } from "@/components/brand/skull-logo";
 import { useSkiGame } from "@/components/ski-game-provider";
-import { HERO_TAGLINE, SITE_NAME } from "@/lib/constants";
+import { HERO_TAGLINE } from "@/lib/constants";
 
 export function HomeHero() {
   const { openSkiGame } = useSkiGame();
@@ -54,11 +54,11 @@ export function HomeHero() {
           className="w-full text-center font-display whitespace-normal leading-snug text-dead-neon md:whitespace-nowrap"
           style={{
             display: "block",
-            fontSize: "clamp(18px, 4vw, 42px)",
+            fontSize: "clamp(24px, 5vw, 56px)",
             textShadow: "0 0 30px rgba(57,255,20,0.4)",
           }}
         >
-          <GlitchText>{SITE_NAME.toUpperCase()}</GlitchText>
+          <GlitchText>DEAD AIR TECH</GlitchText>
         </h1>
         <p
           className="w-full max-w-2xl font-body leading-relaxed text-white"
@@ -96,11 +96,11 @@ export function HomeHero() {
         className="w-full text-center font-display whitespace-normal leading-snug text-dead-neon md:whitespace-nowrap"
         style={{
           display: "block",
-          fontSize: "clamp(18px, 4vw, 42px)",
+          fontSize: "clamp(24px, 5vw, 56px)",
           textShadow: "0 0 30px rgba(57,255,20,0.4)",
         }}
       >
-        <GlitchText>{SITE_NAME.toUpperCase()}</GlitchText>
+        <GlitchText>DEAD AIR TECH</GlitchText>
       </h1>
 
       <p
