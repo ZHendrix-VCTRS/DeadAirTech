@@ -14,7 +14,7 @@ export function GlitchText({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <span className="relative w-max max-w-full shrink-0 text-center">
+    <span className="relative inline-block max-w-full text-center">
       {g && (
         <span
           className="pointer-events-none absolute left-0.5 top-px opacity-80"

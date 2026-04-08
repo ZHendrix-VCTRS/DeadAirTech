@@ -26,7 +26,7 @@ export function AuthNav() {
 
   if (email) {
     return (
-      <form action="/auth/signout" method="post" className="inline">
+      <form action="/auth/signout" method="post" className="inline-flex items-center gap-2">
         <span
           className="hidden max-w-[100px] truncate font-body text-[11px] text-dead-muted sm:inline sm:max-w-[140px]"
           title={email}
@@ -35,7 +35,7 @@ export function AuthNav() {
         </span>
         <button
           type="submit"
-          className="ml-1 rounded px-2 py-1.5 font-display text-[10px] text-[#909090] transition hover:text-dead-red"
+          className="rounded border border-dead-neon bg-dead-neon px-3 py-1.5 font-display text-[13px] tracking-wide text-dead-bg transition hover:bg-dead-neon/80"
         >
           OUT
         </button>
@@ -46,7 +46,7 @@ export function AuthNav() {
   return (
     <Link
       href="/login"
-      className="rounded px-2 py-1.5 font-display text-[10px] text-[#909090] transition hover:text-dead-neon"
+      className="rounded border border-dead-neon bg-dead-neon px-3 py-1.5 font-display text-[13px] tracking-wide text-dead-bg transition hover:bg-dead-neon/80"
     >
       LOG IN
     </Link>

@@ -51,8 +51,9 @@ export function HomeHero() {
           />
         </div>
         <h1
-          className="flex w-full justify-center text-center font-display whitespace-normal leading-snug text-dead-neon md:whitespace-nowrap"
+          className="w-full text-center font-display whitespace-normal leading-snug text-dead-neon md:whitespace-nowrap"
           style={{
+            display: "block",
             fontSize: "clamp(18px, 4vw, 42px)",
             textShadow: "0 0 30px rgba(57,255,20,0.4)",
           }}
@@ -60,7 +61,7 @@ export function HomeHero() {
           <GlitchText>{SITE_NAME.toUpperCase()}</GlitchText>
         </h1>
         <p
-          className="w-full max-w-2xl font-body leading-relaxed text-[#c0c0c0]"
+          className="w-full max-w-2xl font-body leading-relaxed text-white"
           style={{ fontSize: "clamp(14px, 2vw, 18px)" }}
         >
           {HERO_TAGLINE}
@@ -70,7 +71,7 @@ export function HomeHero() {
             💀
           </div>
           <p className="font-display text-lg text-dead-neon">YOU&apos;RE IN THE GRAVEYARD</p>
-          <p className="font-body mt-3 text-[14px] text-[#c0c0c0]">
+          <p className="font-body mt-3 text-[14px] text-white">
             First edition of The Static incoming.
           </p>
         </div>
@@ -92,8 +93,9 @@ export function HomeHero() {
       </div>
 
       <h1
-        className="flex w-full justify-center text-center font-display whitespace-normal leading-snug text-dead-neon md:whitespace-nowrap"
+        className="w-full text-center font-display whitespace-normal leading-snug text-dead-neon md:whitespace-nowrap"
         style={{
+          display: "block",
           fontSize: "clamp(18px, 4vw, 42px)",
           textShadow: "0 0 30px rgba(57,255,20,0.4)",
         }}
@@ -102,7 +104,7 @@ export function HomeHero() {
       </h1>
 
       <p
-        className="w-full max-w-2xl font-body leading-relaxed text-[#c0c0c0]"
+        className="w-full max-w-2xl font-body leading-relaxed text-white"
         style={{ fontSize: "clamp(14px, 2vw, 18px)" }}
       >
         {HERO_TAGLINE}
@@ -135,7 +137,7 @@ export function HomeHero() {
         <p className="w-full max-w-[460px] font-body text-[13px] text-dead-red">{message}</p>
       )}
 
-      <p className="w-full max-w-2xl font-body text-[13px] text-[#808080]">
+      <p className="w-full max-w-2xl font-body text-[15px] text-white">
         No spam. Unsubscribe anytime — unlike Google&apos;s products, we respect your choices.
       </p>
     </section>
