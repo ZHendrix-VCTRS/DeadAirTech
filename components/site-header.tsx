@@ -44,8 +44,8 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-[100] border-b border-dead-line bg-[rgba(10,10,10,0.92)] backdrop-blur-[10px]">
-      <div className="mx-auto flex max-w-5xl flex-nowrap items-center justify-between gap-4 px-4 py-4 sm:px-6">
-        <div className="flex items-center gap-2.5">
+      <div className="mx-auto flex max-w-5xl flex-nowrap items-center justify-between gap-2 px-3 py-3 sm:gap-3 sm:px-6 sm:py-4">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-2.5">
           <SkullLogo
             size={28}
             onClick={openSkiGame}
@@ -53,20 +53,20 @@ export function SiteHeader() {
           />
           <Link
             href="/"
-            className="whitespace-nowrap font-display text-[13px] tracking-wide text-dead-neon"
+            className="whitespace-nowrap font-display text-[12px] tracking-wide text-dead-neon sm:text-[13px]"
             style={{ textShadow: "0 0 12px rgba(57,255,20,0.35)" }}
           >
             DEAD AIR
           </Link>
         </div>
-        <nav className="flex flex-nowrap items-center gap-2">
+        <nav className="flex min-w-0 flex-1 flex-nowrap items-center justify-end gap-0.5 sm:gap-1">
           {NAV.map((item) => {
             const active = isNavActive(pathname, hash, item);
             return (
               <Link
                 key={item.label}
                 href={item.href}
-                className={`rounded px-3 py-2 font-display text-[11px] tracking-wide transition sm:px-4 ${
+                className={`whitespace-nowrap rounded px-1.5 py-1.5 font-display text-[10px] tracking-wide transition sm:px-2 sm:text-[11px] ${
                   active
                     ? "bg-[rgba(57,255,20,0.1)] text-dead-neon"
                     : "text-white hover:text-dead-neon/80"
@@ -76,7 +76,9 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <AuthNav />
+          <div className="shrink-0 pl-0.5">
+            <AuthNav />
+          </div>
         </nav>
       </div>
     </header>

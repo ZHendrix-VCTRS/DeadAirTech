@@ -35,7 +35,7 @@ export function AuthNav() {
         </span>
         <button
           type="submit"
-          className="rounded border border-dead-neon bg-dead-neon px-3 py-1.5 font-display text-[13px] tracking-wide text-dead-bg transition hover:bg-dead-neon/80"
+          className="whitespace-nowrap rounded border border-dead-neon bg-dead-neon px-2 py-1 font-display text-[10px] tracking-wide text-dead-bg transition hover:bg-dead-neon/80 sm:px-2.5 sm:text-[11px]"
         >
           OUT
         </button>
