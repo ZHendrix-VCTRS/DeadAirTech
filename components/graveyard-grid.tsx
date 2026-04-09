@@ -41,10 +41,10 @@ export function GraveyardGrid({ projects }: { projects: GraveyardGridProject[] }
               key={p.id}
               href={`/project/${p.id}`}
               title={title}
-              className={`aspect-square min-h-[12px] min-w-[12px] rounded-sm border transition hover:z-[1] hover:ring-2 hover:ring-dead-neon/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-dead-neon ${
+              className={`aspect-square min-h-[12px] min-w-[12px] rounded-sm border-2 transition hover:z-[1] hover:ring-2 focus-visible:outline-none focus-visible:ring-2 ${
                 hot
-                  ? "border-dead-neon/35 bg-dead-neon/22"
-                  : "border-dead-red/35 bg-dead-red/18"
+                  ? "border-dead-neon bg-[rgba(57,255,20,0.55)] shadow-[0_0_8px_rgba(57,255,20,0.45)] hover:bg-[rgba(57,255,20,0.72)] hover:ring-dead-neon focus-visible:ring-dead-neon"
+                  : "border-dead-red bg-[rgba(255,0,64,0.48)] shadow-[0_0_8px_rgba(255,0,64,0.4)] hover:bg-[rgba(255,0,64,0.62)] hover:ring-dead-red focus-visible:ring-dead-red"
               }`}
             />
           );

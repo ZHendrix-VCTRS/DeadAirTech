@@ -33,7 +33,6 @@ export default async function LeaderboardPage() {
 
   const rows = (leaderboardData ?? []) as LeaderboardRow[];
   const gridProjects = gridError ? [] : (gridData ?? []);
-  const plotCount = gridProjects.length;
 
   return (
     <div className="space-y-12">
@@ -49,7 +48,7 @@ export default async function LeaderboardPage() {
         <div className="space-y-1">
           <p className="font-display text-[10px] tracking-[0.25em] text-white/40">THE GRAVEYARD MAP</p>
           <h2 className="font-display text-[14px] text-dead-neon">
-            {plotCount} PLOTS. GREEN MEANS BRING IT BACK. RED MEANS LET IT ROT.
+            GREEN MEANS BRING IT BACK. RED MEANS LET IT ROT.
           </h2>
           <p className="font-body text-[14px] text-white/50">Hover a square. Pay your respects.</p>
         </div>
@@ -61,7 +60,7 @@ export default async function LeaderboardPage() {
           <p className="font-body text-[15px] leading-relaxed text-white">
             This map is waiting on the internet to have opinions. Shouldn&apos;t take long. You people have never
             built anything in your lives but you&apos;ve got extremely strong feelings about what should have
-            survived. We respect that. Mostly. Vote above. Then come back and watch the graveyard change colors.
+            survived. We respect that. Mostly. Vote below. Then come back and watch the graveyard change colors.
           </p>
         </div>
 
