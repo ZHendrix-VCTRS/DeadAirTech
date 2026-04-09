@@ -11,6 +11,7 @@ const NAV: { href: string; label: string; hash?: string }[] = [
   { href: "/", label: "HOME" },
   { href: "/#hot-or-not", label: "HOT OR NOT", hash: "hot-or-not" },
   { href: "/leaderboard", label: "LEADERBOARD" },
+  { href: "/eulogy", label: "EULOGY" },
   { href: "/submit", label: "BURY" },
   { href: "/#the-static", label: "SUBSCRIBE", hash: "the-static" },
 ];
