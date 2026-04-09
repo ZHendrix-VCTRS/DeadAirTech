@@ -33,6 +33,7 @@ function isNavActive(
 export function SiteHeader() {
   const pathname = usePathname();
   const [hash, setHash] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
   const { openSkiGame } = useSkiGame();
 
   useEffect(() => {
@@ -42,10 +43,15 @@ export function SiteHeader() {
     return () => window.removeEventListener("hashchange", read);
   }, [pathname]);
 
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
   return (
     <header className="sticky top-0 z-[100] border-b border-dead-line bg-[rgba(10,10,10,0.92)] backdrop-blur-[10px]">
-      <div className="mx-auto flex max-w-5xl flex-nowrap items-center justify-between gap-2 px-3 py-3 sm:gap-3 sm:px-6 sm:py-4">
-        <div className="flex shrink-0 items-center gap-2 sm:gap-2.5">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-6">
+        {/* Logo */}
+        <div className="flex shrink-0 items-center gap-2">
           <SkullLogo
             size={28}
             onClick={openSkiGame}
@@ -59,14 +65,16 @@ export function SiteHeader() {
             DEAD AIR
           </Link>
         </div>
-        <nav className="flex min-w-0 flex-1 flex-nowrap items-center justify-end gap-0.5 sm:gap-1">
+
+        {/* Desktop nav */}
+        <nav className="hidden items-center gap-1 md:flex">
           {NAV.map((item) => {
             const active = isNavActive(pathname, hash, item);
             return (
               <Link
                 key={item.label}
                 href={item.href}
-                className={`whitespace-nowrap rounded px-1.5 py-1.5 font-display text-[10px] tracking-wide transition sm:px-2 sm:text-[11px] ${
+                className={`whitespace-nowrap rounded px-2 py-1.5 font-display text-[10px] tracking-wide transition sm:text-[11px] ${
                   active
                     ? "bg-[rgba(57,255,20,0.1)] text-dead-neon"
                     : "text-white hover:text-dead-neon/80"
@@ -76,11 +84,52 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <div className="shrink-0 pl-0.5">
-            <AuthNav />
-          </div>
+          <AuthNav />
         </nav>
+
+        {/* Mobile right side */}
+        <div className="flex items-center gap-2 md:hidden">
+          <AuthNav />
+          <button
+            type="button"
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="flex flex-col items-center justify-center gap-[5px] p-2"
+            aria-expanded={menuOpen}
+            aria-label="Toggle menu"
+          >
+            <span
+              className={`block h-[2px] w-5 bg-dead-neon transition-all ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`}
+            />
+            <span className={`block h-[2px] w-5 bg-dead-neon transition-all ${menuOpen ? "opacity-0" : ""}`} />
+            <span
+              className={`block h-[2px] w-5 bg-dead-neon transition-all ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
+            />
+          </button>
+        </div>
       </div>
+
+      {/* Mobile menu dropdown */}
+      {menuOpen && (
+        <div className="flex flex-col gap-1 border-t border-dead-line bg-[rgba(10,10,10,0.97)] px-4 py-3 md:hidden">
+          {NAV.map((item) => {
+            const active = isNavActive(pathname, hash, item);
+            return (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className={`rounded px-3 py-2.5 font-display text-[11px] tracking-wide transition ${
+                  active
+                    ? "bg-[rgba(57,255,20,0.1)] text-dead-neon"
+                    : "text-white hover:text-dead-neon/80"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </div>
+      )}
     </header>
   );
 }
